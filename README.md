@@ -2,19 +2,7 @@
 
 > Built with webpack and ES6
 
-> ![](./src/assets/todo-list.png) 
-
-Project Summary:
-
-In the following project, I have implemeted functionalities for:
-
-- Adding a new item.
-- Removing a selected item.
-- Reordering a selected item (as drag-and-drop).
-- Marking a selected item as complete.
-- Removing all items marked as complete at once.
-
-The project involves working with functions that respond to user actions. These actions are anticipated and listened to using JavaScript Event Listeners.
+> ![](./src/assets/todo-list.png)
 
 ## Built With
 
