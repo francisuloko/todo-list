@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.card-body,
+#notice {
+  width: 500px;
+  margin: 10px auto;
+  padding: 0;
+}
+
+.shadow {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 3px rgb(207, 207, 207);
+}
+
+.to-do-header {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.drag-btn,
+.card-header,
+.task-entry,
+.task-item,
+.card-footer {
+  padding: 15px;
+}
+
+.task-entry {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #f6f6f6;
+  outline: 0;
+}
+
+.task-entry::placeholder {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f6f6f6;
+}
+
+.entry,
+.card-header {
+  position: relative;
+}
+
+.entry i,
+.card-header i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.icons {
+  height: 15px;
+  width: 15px;
+  float: right;
+}
+
+#to-do-list {
+  height: auto;
+}
+
+#clear-complete {
+  background-color: transparent;
+  color: #888;
+  font-size: 0.9em;
+  border: 0;
+  outline: 0;
+}
+
+#clear-complete:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+.task-description {
+  width: 100%;
+  margin: 0 10px;
+}
+
+.card-footer {
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.completed {
+  text-decoration: black line-through;
+}
+
+.hide,
+.bi-trash {
+  display: none;
+}
+
+.show {
+  display: block;
+}
