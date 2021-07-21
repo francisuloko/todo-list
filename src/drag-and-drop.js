@@ -1,13 +1,12 @@
-import checkboxesEvent from './status-update.js';
-import { displayTasks, list, save } from './storage.js';
-
-const temp = list;
+import checkboxesEvent, { list } from './status-update.js';
+import { displayTasks, remove } from './crudtodo.js';
 
 export default function dragAndDrop() {
   let dragged;
 
   document.addEventListener('dragstart', (event) => {
     dragged = event.target;
+    console.log(dragged)
     event.dataTransfer.setData('text', event.target.classList);
   }, false);
 
@@ -18,14 +17,13 @@ export default function dragAndDrop() {
   document.addEventListener('drop', (event) => {
     event.preventDefault();
     if (event.dataTransfer.getData('text') === 'task-item') {
-      const taskIndex = temp[dragged.id].index;
-      temp[dragged.id].index = temp[event.target.id].index;
-      temp[event.target.id].index = taskIndex;
-      dragged.id = temp[dragged.id].index;
-      event.target.id = temp[event.target.id].index;
+      const taskIndex = list[dragged.id].index;
+      list[dragged.id].index = list[event.target.id].index;
+      list[event.target.id].index = taskIndex;
+      dragged.id = list[dragged.id].index;
+      event.target.id = list[event.target.id].index;
     }
     displayTasks();
-    save(temp);
     checkboxesEvent();
   }, false);
 }
