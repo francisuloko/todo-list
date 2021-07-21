@@ -101,9 +101,10 @@ body {
 .completed {
   text-decoration: black line-through;
 }
-
-.hide,
-.bi-trash {
+.bi-three-dots-vertical {
+  cursor: move;
+}
+.hide {
   display: none;
 }
 
