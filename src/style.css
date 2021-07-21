@@ -101,9 +101,11 @@ body {
 .completed {
   text-decoration: black line-through;
 }
+
 .bi-three-dots-vertical {
   cursor: move;
 }
+
 .hide {
   display: none;
 }

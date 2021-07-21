@@ -86,3 +86,6 @@ export function fixIndex(list) {
     list[i].index = i;
   }
 }
+
+const d = document.querySelectorAll('[draggable]')
+console.log(d);
