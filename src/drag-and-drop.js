@@ -1,7 +1,7 @@
 import checkboxesEvent from './status-update.js';
 import { displayTasks, list, save } from './storage.js';
 
-let temp = list;
+const temp = list;
 
 export default function dragAndDrop() {
   let dragged;

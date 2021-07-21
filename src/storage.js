@@ -25,12 +25,12 @@ export const listArray = [
     description: 'Get some rest',
     completed: false,
     index: 4,
-  }
+  },
 ];
 
 export const save = (change) => {
   localStorage.setItem('list', JSON.stringify(change));
-}
+};
 
 if (localStorage.getItem('list')) {
   storage = JSON.parse(localStorage.getItem('list'));
@@ -39,10 +39,6 @@ if (localStorage.getItem('list')) {
 }
 
 export const list = storage;
-console.log(storage);
-
-
-
 
 export const createTask = (task) => {
   let todoObj = '';
@@ -84,7 +80,6 @@ export const displayTasks = () => {
     createTask(task);
   });
 };
-
 
 export function fixIndex(list) {
   for (let i = 0; i < list.length; i += 1) {
