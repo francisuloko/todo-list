@@ -6,7 +6,6 @@ export default function dragAndDrop() {
 
   document.addEventListener('dragstart', (event) => {
     dragged = event.target;
-    console.log(dragged)
     event.dataTransfer.setData('text', event.target.classList);
   }, false);
 
