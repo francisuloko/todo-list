@@ -4,6 +4,9 @@
 
 > ![](./src/assets/todo-list.png)
 
+## Live Demo
+Click [here](https://francisuloko.github.io/todo-list/dist/) to visit the app
+
 ## Built With
 
 - JavaScript
