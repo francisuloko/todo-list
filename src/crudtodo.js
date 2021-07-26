@@ -76,16 +76,17 @@ export function clear() {
 }
 
 export function add() {
-  document.getElementById('task-entry')
-    .addEventListener('keypress', (event) => {
-      if (event.key === 'Enter') {
-        const description = document.getElementById('task-entry').value;
-        const task = { description, completed: false, index: list.length };
-        list.push(task);
-        save();
-        displayTasks();
-        edit();
-        checkboxesEvent();
-      }
-    });
+  document.getElementById('task-entry').addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      const description = document.getElementById('task-entry');
+      const id = list.length;
+      const task = { description: description.value, completed: false, index: id };
+      description.value = '';
+      list.push(task);
+      save();
+      displayTasks();
+      edit();
+      checkboxesEvent();
+    }
+  });
 }
