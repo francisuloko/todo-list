@@ -1,12 +1,11 @@
 import checkboxesEvent, { list } from './status-update.js';
-import { displayTasks, remove } from './crudtodo.js';
+import { displayTasks } from './crudtodo.js';
 
 export default function dragAndDrop() {
   let dragged;
 
   document.addEventListener('dragstart', (event) => {
     dragged = event.target;
-    console.log(dragged)
     event.dataTransfer.setData('text', event.target.classList);
   }, false);
 
