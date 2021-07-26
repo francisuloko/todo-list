@@ -1,4 +1,5 @@
 // eslint-disable-next-line import/no-cycle
+import dragAndDrop from './drag-and-drop.js';
 import checkboxesEvent, {
   list, save, fixIndex, setList, remove,
 } from './status-update.js';
@@ -54,13 +55,13 @@ export const displayTasks = () => {
 export function edit() {
   const editables = document.querySelectorAll('[contenteditable]');
   for (let i = 0; i < editables.length; i += 1) {
-    editables[i].addEventListener('blur', () => {
-      localStorage.setItem('edit', JSON.stringify(editables[i].innerHTML));
-      list[i].description = JSON.parse(localStorage.getItem('edit'));
-      save();
-      displayTasks();
-      edit();
-    });
+      editables[i].addEventListener('blur', () => {
+        localStorage.setItem('edit', JSON.stringify(editables[i].innerHTML));
+        list[i].description = JSON.parse(localStorage.getItem('edit'));
+        save();
+        displayTasks();
+        edit();
+      });
   }
 }
 
@@ -76,16 +77,17 @@ export function clear() {
 }
 
 export function add() {
-  document.getElementById('task-entry')
-    .addEventListener('keypress', (event) => {
-      if (event.key === 'Enter') {
-        const description = document.getElementById('task-entry').value;
-        const task = { description, completed: false, index: list.length };
-        list.push(task);
-        save();
-        displayTasks();
-        edit();
-        checkboxesEvent();
-      }
-    });
+  document.getElementById('task-entry').addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      const description = document.getElementById('task-entry');
+      const id = list.length;
+      const task = { description: description.value, completed: false, index: id };
+      description.value = '';
+      list.push(task);
+      save();
+      displayTasks();
+      edit();
+      checkboxesEvent();
+    }
+  });
 }
