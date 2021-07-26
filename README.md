@@ -21,9 +21,9 @@ To get a local copy up and running follow these simple steps:
 
    - `Open terminal Ctrl + Alt + T`
 
-   - `git clone git@github.com:francisuloko/to-do-list.git`
+   - `git clone git@github.com:francisuloko/todo-list.git`
 
-   - `cd to-do-list`
+   - `cd todo-list`
 
    - `npm install`
 
@@ -52,7 +52,7 @@ To get a local copy up and running follow these simple steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/francisuloko/to-do-list/issues).
+Feel free to check the [issues page](https://github.com/francisuloko/todo-list/issues).
 
 
 ## Show your support
