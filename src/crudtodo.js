@@ -81,7 +81,6 @@ export function add() {
       const description = document.getElementById('task-entry');
       const id = list.length;
       const task = { description: description.value, completed: false, index: id };
-      description.value = '';
       list.push(task);
       save();
       displayTasks();
