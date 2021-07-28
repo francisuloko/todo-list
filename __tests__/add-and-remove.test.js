@@ -45,6 +45,7 @@ describe("Add Function", () => {
       test('New item description valid', () => {
         expect(list[0].completed).toBeFalsy();
       });
+
     });
 
     describe("Display task items from LocalStorage", () => {
@@ -106,4 +107,60 @@ describe("Add Function", () => {
     });
 });
 
-describe("Remove Function", () => {})
+describe("Remove task items from LocalStorage", () => {
+  document.body.innerHTML = `
+   <form>
+     <input type="text" name="task-entry" id="task-entry" />
+   </form>
+  <div id="todo-list"></div>`;
+  
+  const mockStorage = new MockStorage();
+  let temp = [
+    {
+      description: 'Sample 1',
+      completed: true,
+      index: 1
+    },
+    {
+      description: 'Sample 2',
+      completed: false,
+      index: 2,
+    },
+    {
+      description: 'Sample 3',
+      completed: false,
+      index: 3,
+    },
+  ]
+  mockStorage.setList(temp);
+  let list = mockStorage.getList()
+  let todoList = document.getElementById('todo-list');
+
+  list.forEach(task => {
+    let todoObj = '';
+    if (task.completed === true) {
+      todoObj = `
+        <article id="${task.index}" class="task-item" draggable="true">
+          <input type='checkbox' name='completed' class="checkbox" checked>
+          <span class='task-description completed' id="desc-${task.index}" contenteditable>${task.description}</span>
+          <i class="bi bi-three-dots-vertical"></i>
+          <i class="bi bi-trash hide"></i>
+        </article>`;
+    } else {
+      todoObj = `
+          <article  id="${task.index}" class="task-item" draggable="true">
+            <input type='checkbox' name='completed' class="checkbox">
+            <span class='task-description' id="desc-${task.index}" contenteditable>${task.description}</span>
+            <i class="bi bi-three-dots-vertical"></i>
+            <i class="bi bi-trash hide"></i>
+          </article>`;
+    }
+
+    todoList.innerHTML += todoObj;
+    
+  })
+  test('Remove item from the list', () => {
+    list.splice(2, 1);     
+    expect(list.length).toEqual(2);
+  })
+})

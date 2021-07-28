@@ -1,4 +1,4 @@
-export class LocalStorage {
+export default class LocalStorage {
     constructor() {
       this.list = [];
     }
