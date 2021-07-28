@@ -4,7 +4,7 @@
   "description": "> # To-Do List",
   "private": "true",
   "scripts": {
-    "test": "jest --coverage --env=jsdom",
+    "test": "jest --env=jsdom",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
