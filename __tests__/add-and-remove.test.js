@@ -160,7 +160,11 @@ describe("Remove task items from LocalStorage", () => {
     
   })
   test('Remove item from the list', () => {
-    list.splice(2, 1);     
+    const items = document.querySelectorAll('.task-item');
+    // console.log(items[1].id)
+    todoList.splice(items[0].id, 1);
+    todoList.splice(items[1].id, 1);
+      
     expect(list.length).toEqual(2);
   })
 })
