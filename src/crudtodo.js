@@ -86,6 +86,7 @@ export function add() {
         displayTasks();
         edit();
         checkboxesEvent();
+        description.value = '';
       }
     });
 }
