@@ -4,7 +4,7 @@
 
 import MockStorage from '../src/__mocks__/local-storage.js';
 import MockDOM from '../src/__mocks__/DOM.js';
-import { add } from '../src/crudtodo.js'
+import { add } from '../src/crudtodo.js';
 
 describe('Add Function', () => {
   describe('Add new item to LocalStorage', () => {
