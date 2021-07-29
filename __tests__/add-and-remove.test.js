@@ -74,32 +74,7 @@ describe('Add Function', () => {
     mockStorage.setList(temp);
     const list = mockStorage.getList();
 
-<<<<<<< HEAD
-    list.forEach((task) => {
-      let todoObj = '';
-      if (task.completed === true) {
-        todoObj = `
-            <article id="${task.index}" class="task-item" draggable="true">
-              <input type='checkbox' name='completed' class="checkbox" checked>
-              <span class='task-description completed' id="desc-${task.index}" contenteditable>${task.description}</span>
-              <i class="bi bi-three-dots-vertical"></i>
-              <i class="bi bi-trash hide"></i>
-            </article>`;
-      } else {
-        todoObj = `
-              <article  id="${task.index}" class="task-item" draggable="tru"e>
-                <input type='checkbox' name='completed' class="checkbox">
-                <span class='task-description' id="desc-${task.index}" contenteditable>${task.description}</span>
-                <i class="bi bi-three-dots-vertical"></i>
-                <i class="bi bi-trash hide"></i>
-              </article>`;
-      }
-
-      todoList.innerHTML += todoObj;
-    });
-=======
     mockDOM.displayTask(list);
->>>>>>> improvements
 
     test('Items added to DOM', () => {
       const items = document.querySelectorAll('[draggable]');
