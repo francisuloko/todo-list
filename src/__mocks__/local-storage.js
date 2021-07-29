@@ -1,4 +1,4 @@
-export default class LocalStorage {
+export default class MockStorage {
   constructor() {
     this.list = [];
   }
