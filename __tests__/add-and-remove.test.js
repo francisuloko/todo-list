@@ -42,7 +42,7 @@ describe('Add Function', () => {
       expect(list[0].description).toBe('Sample task 1');
     });
 
-    test('New item description valid', () => {
+    test('New item index  valid', () => {
       expect(list[0].index).toBe(0);
     });
 
@@ -92,7 +92,7 @@ describe('Add Function', () => {
             </article>`;
       } else {
         todoObj = `
-              <article  id="${task.index}" class="task-item" draggable="true">
+              <article  id="${task.index}" class="task-item" draggable="tru"e>
                 <input type='checkbox' name='completed' class="checkbox">
                 <span class='task-description' id="desc-${task.index}" contenteditable>${task.description}</span>
                 <i class="bi bi-three-dots-vertical"></i>
