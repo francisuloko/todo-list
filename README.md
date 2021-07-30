@@ -15,6 +15,13 @@ Click [here](https://francisuloko.github.io/todo-list/dist/) to visit the app
 - ES6
 - bootstrap 5
 
+## Prerequisites
+
+- `browser`
+- `vscode`
+- `git`
+- `jest`
+
 ## Clone Repo
 
 To get a local copy up and running follow these simple steps:
@@ -30,14 +37,19 @@ To get a local copy up and running follow these simple steps:
    - `npm start`
 
    - `visit localhost:8080`
+
+## Run the tests
+
+- Install jest using yarn `yarn add --dev jest`
+- Or install using npm `npm install --save-dev jest`
+- Add the following section to your package.json: 
+`{
+  "scripts": {
+    "test": "jest"
+  }
+}`
+- How to run the tests: `npm run test` or `yarn test`
    
-
-## Prerequisites
-
-- `browser`
-- `vscode`
-- `git`
-
 
 ## Author
 
