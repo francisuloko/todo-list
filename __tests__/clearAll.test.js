@@ -33,6 +33,7 @@ describe('Clear All completed items', () => {
   mockStorage.setList(todo);
   list = mockStorage.getList();
   mockDOM.displayTask(list);
+  // clear();
 
   test('Remove completed item', () => {
     expect(list.length).toEqual(2);

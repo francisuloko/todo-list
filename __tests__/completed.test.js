@@ -43,4 +43,12 @@ describe('Update task completion', () => {
   test('Task completion is updated successfully', () => {
     expect(list[0].completed).toBeTruthy();
   });
+
+  test('Expect completed not to be false', () => {
+    expect(list[0].completed).not.toBe(false);
+  });
+
+  test('Task completion is false', () => {
+    expect(list[1].completed).toBeFalsy();
+  });
 });

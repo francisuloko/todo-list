@@ -4,6 +4,7 @@
 
 import MockStorage from '../src/__mocks__/local-storage.js';
 import MockDOM from '../src/__mocks__/DOM.js';
+import { edit } from '../src/crudtodo.js';
 
 describe('Edit Function', () => {
   const temp = [
@@ -39,6 +40,7 @@ describe('Edit Function', () => {
 
   mockDOM.displayTask(list);
   const editable = document.querySelector('[contenteditable]');
+  edit();
 
   if (editable.dispatchEvent(clickEvent)) {
     editable.innerHTML = 'Updated task';
